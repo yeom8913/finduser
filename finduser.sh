@@ -393,43 +393,43 @@ printf "\e[1;92m Found!\e[0m https://www.scribd.com/%s\n" $username
 printf "https://www.scribd.com/%s\n" $username >> $username.txt
 fi
 
-## Badoo
+## Naver
 
 printf "\e[1;77m[\e[0m\e[1;92m+\e[0m\e[1;77m] Badoo: \e[0m"
-check1=$(curl -s -i "https://www.badoo.com/en/$username" -H "Accept-Language: en" -L | grep -o '404 Not Found' ; echo $?)
+check1=$(curl -s -i "https://www.naver.com/$username" -H "Accept-Language: en" -L | grep -o '404 Not Found' ; echo $?)
 
 if [[ $check1 == *'0'* ]] ; then 
 printf "\e[1;93mNot Found!\e[0m\n"
 elif [[ $check1 == *'1'* ]]; then 
 
-printf "\e[1;92m Found!\e[0m https://www.badoo.com/en/%s\n" $username
-printf "https://www.badoo.com/en/%s\n" $username >> $username.txt
+printf "\e[1;92m Found!\e[0m https://www.naver.com/%s\n" $username
+printf "https://www.naver.com/%s\n" $username >> $username.txt
 fi
 
-# Patreon
+# Daum
 
 printf "\e[1;77m[\e[0m\e[1;92m+\e[0m\e[1;77m] Patreon: \e[0m"
-check1=$(curl -s -i "https://www.patreon.com/$username" -H "Accept-Language: en" -L | grep -o 'HTTP/2 404' ; echo $?)
+check1=$(curl -s -i "https://www.daum.net/$username" -H "Accept-Language: en" -L | grep -o 'HTTP/2 404' ; echo $?)
 
 if [[ $check1 == *'0'* ]] ; then 
 printf "\e[1;93mNot Found!\e[0m\n"
 elif [[ $check1 == *'1'* ]]; then 
 
-printf "\e[1;92m Found!\e[0m https://www.patreon.com/%s\n" $username
-printf "https://www.patreon.com/%s\n" $username >> $username.txt
+printf "\e[1;92m Found!\e[0m https://www.daum.net/%s\n" $username
+printf "https://www.daum.net/%s\n" $username >> $username.txt
 fi
 
-## BitBucket
+## Nate
 
 printf "\e[1;77m[\e[0m\e[1;92m+\e[0m\e[1;77m] BitBucket: \e[0m"
-check1=$(curl -s -i "https://bitbucket.org/$username" -H "Accept-Language: en" -L | grep -o 'HTTP/2 404' ; echo $?)
+check1=$(curl -s -i "https://nate.com/$username" -H "Accept-Language: en" -L | grep -o 'HTTP/2 404' ; echo $?)
 
 if [[ $check1 == *'0'* ]] ; then 
 printf "\e[1;93mNot Found!\e[0m\n"
 elif [[ $check1 == *'1'* ]]; then 
 
-printf "\e[1;92m Found!\e[0m https://bitbucket.org/%s\n" $username
-printf "https://bitbucket.org/%s\n" $username >> $username.txt
+printf "\e[1;92m Found!\e[0m https://nate.com/%s\n" $username
+printf "https://nate.com/%s\n" $username >> $username.txt
 fi
 
 ## DailyMotion
@@ -445,17 +445,17 @@ printf "\e[1;92m Found!\e[0m https://www.dailymotion.com/%s\n" $username
 printf "https://www.dailymotion.com/%s\n" $username >> $username.txt
 fi
 
-## Etsy
+## cyworld
 
 printf "\e[1;77m[\e[0m\e[1;92m+\e[0m\e[1;77m] Etsy: \e[0m"
-check1=$(curl -s -i "https://www.etsy.com/shop/$username" -H "Accept-Language: en" -L | grep -o 'HTTP/2 404' ; echo $?)
+check1=$(curl -s -i "https://$username.cyworld.com" -H "Accept-Language: en" -L | grep -o 'HTTP/2 404' ; echo $?)
 
 if [[ $check1 == *'0'* ]] ; then 
 printf "\e[1;93mNot Found!\e[0m\n"
 elif [[ $check1 == *'1'* ]]; then 
 
-printf "\e[1;92m Found!\e[0m https://www.etsy.com/shop/%s\n" $username
-printf "https://www.etsy.com/shop/%s\n" $username >> $username.txt
+printf "\e[1;92m Found!\e[0m https://cy.cyworld.com" $username
+printf "https://www.cy.cyworld.com/%s\n" $username >> $username.txt
 fi
 
 ## CashMe
